@@ -10,6 +10,7 @@ metadata:
   namespace: {{ include "k8s-infra.namespace" . }}
   labels:
     {{- include "otelDeployment.labels" . | nindent 4 }}
+    {{- include "otelDeployment.labels" . | nindent 4 }}
   {{- with .Values.otelDeployment.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
